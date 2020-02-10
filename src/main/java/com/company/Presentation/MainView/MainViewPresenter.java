@@ -77,7 +77,7 @@ public class MainViewPresenter implements IMainViewPresenter, IOnTrainEventListe
   public void extractFaces(File imageFilePath) {
     _view.clearFaces();
     ExtractFacesFromImageTask extractFacesFromImageTask = new ExtractFacesFromImageTask("Extract Faces",_applicationController,
-        imageFilePath,new File("E:\\projects\\back_end\\FaceMaven\\haarcascade_frontalface_alt.xml"),new File("E:\\projects\\back_end\\FaceMaven\\Temp"),
+        imageFilePath,new File("E:\\projects\\back_end\\FaceMaven\\Temp\\cascade.xml"),new File("E:\\projects\\back_end\\FaceMaven\\Temp"),
         1.05,7,new Size(10,10), new Size(200,200));
 
     _message.bind(extractFacesFromImageTask.messageProperty());

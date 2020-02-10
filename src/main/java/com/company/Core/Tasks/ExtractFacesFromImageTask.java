@@ -56,9 +56,7 @@ public class ExtractFacesFromImageTask extends BaseTask<List<File>> {
   @Override
   protected List<File> runTask() {
     List<File> faceList = new ArrayList<>();
-
     MatOfRect matFaceList = new MatOfRect();
-
     Mat image = Imgcodecs.imread(_imageFilePath.getAbsolutePath());
     if (image.empty()) return faceList;
 
